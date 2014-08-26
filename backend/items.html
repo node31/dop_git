@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="itemsStyle.css" type="text/css" media="screen" charset="utf-8">
+		<link href="css/navbar_style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="jquery-1.11.0.js"> </script>
+		<script src="items.js"></script>
+	</head>
+	<body>
+	<div class="header"><img src="images/header.jpg" width="100%"></div>
+	<div class="navbar_page">
+		
+		<ul class="navbar_list1">
+			<li class="navbar_item" id="navbar_list1_item1" style=""><a href="meals.html" id="i">Home</a></li>
+			<li class="navbar_item" id="navbar_list1_item2"><a href="#" id="e">My Stats</a></li>
+			<li class="navbar_item" id="navbar_list1_item4"><a href="bar2.html" id="w">Reports</a></li>
+			<li class="navbar_item" id="navbar_list1_item3" style=""><a href="#" id="p">Recommendations</a></li>
+		</ul>
+	</div>
+		<div id="itemsWrap">
+			<div id = "itemsList">
+				
+			</div>
+		<br><br>
+		<div id="servingsList">
+			
+		</div>
+		<div id="SubmitDiv">
+			<form method="POST" id="servingsForm" action="get_items2.php">
+				<input id="eaten_food" name="eaten_food" type="text">
+				<input id="food_time" name="food_time" type="text" value="1">
+				
+				<input id="submitButton" type="Submit" value="Submit">
+			</form>
+		</div>
+		<div>
+		
+		
+	</body>
+</html>

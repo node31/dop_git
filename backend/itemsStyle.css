@@ -1,0 +1,62 @@
+#itemsWrap {
+	margin-left:10%;
+	width:80%;
+}
+#itemsList {
+	width:100%;
+}
+
+#eaten_food {
+	display:none;
+}
+
+#food_time {
+	display:none;
+}
+
+.itemsSingle {
+	opacity:0.8;
+	background:#B40404;
+	color:#ffffff;
+	margin-left:10px;
+	margin-top:10px;
+	float:left;
+	width:22%;
+	height:25%;
+	cursor:hand;
+	overflow:hidden;
+}
+#servingsList {
+	position:absolute;
+	bottom:120px;
+	left:400px;
+	/* margin-left:10%;	 */
+}
+
+#fillServings {
+	background:#0080FF;
+	padding:10px;
+	color:#ffffff;
+	cursor:hand;
+	/* float:right; */
+	position:fixed;
+	bottom:10px;
+	right:100px;
+	font-family:"Segoe UI";
+	font-weight:bold;
+}
+
+.itemsName {
+	color:#ffffff;
+	text-align:center;
+	font-family:'Segoe UI';
+	font-size:30px;
+	font-weight:bold;
+	padding:10px 15px;
+}
+
+#submitDiv {
+	position:fixed;
+	bottom:50px;
+	right:100px;
+}

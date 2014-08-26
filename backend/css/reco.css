@@ -1,0 +1,26 @@
+/* /* /* @charset "utf-8";
+/* CSS Document */
+
+ul{
+	list-style:none;
+	font-size:1.1em;
+	text-decoration:none;
+	font-family:Verdana;
+	border:2px solid;
+	list-style-image:url(../images/bullet1.png);
+	border-radius:5px;
+	background:#D8D8D8;
+}
+
+ul li{
+margin-top:5px;
+margin-bottom:10px;
+}
+
+h1{
+font-family:Cambria;
+}
+
+hr{
+background:#333;
+}

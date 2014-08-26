@@ -1,0 +1,119 @@
+<?php
+
+?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Registration</title>
+<link href="css/register.css" rel="stylesheet" type="text/css"/>
+<script>
+
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable)	{
+					return pair[1];
+				}
+       }
+       return(false);
+}
+
+function checkVars() {
+	var res = getQueryVariable("shiva");
+	if (res == 1) {
+		alert("Please retype the password correctly.");
+	}
+	if (res == 2) {
+		alert("Username already exists.");
+	}
+}
+
+function validateForm(){
+	//var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	var x=document.forms["reg"]["name"].value;
+	var y=document.forms["reg"]["username"].value;
+	var z=document.forms["reg"]["mobile"].value;
+
+	//var email1 = document.forms["reg"]["email_one"].value;   
+
+	if(x==null || x==" " || x="Name")
+	{
+		alert("Enter Name");
+		return false;
+	}
+
+	if(y==null || y=="" || y="User ID")
+	{
+		alert("Enter UserName");
+		return false;
+	}
+	 
+	if(z==null || z=="" || z="Mobile")
+	{
+		alert("enter Mobile");
+		return false;
+	}
+	checkVars();
+}
+</script>
+</head>
+<body onload="checkVars()">
+<div class="wrapper">
+	<div class="header"><img src="images/header.jpg" width="100%"></div>
+	<table class="form" >
+	<form name="reg" onsubmit="return validateForm()" method="post" action="reg.php">
+		<tr>
+			<td>
+				<h2 style="color:#777777;font-family:arial;padding-left:23%;">Register</h2>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<input type="textbox" placeholder="User ID" class="fields" name="username">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<input type="password" placeholder="Password" class="fields" name="password">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="password" placeholder="Confirm Password" class="fields" name="password_conf">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<br><br>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="textbox" placeholder="Name" class="fields" name="name">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="email" placeholder="E-mail" class="fields" name="email">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="textbox" placeholder="Mobile" class="fields" name="mobile">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<input type="submit" value="Submit" class="submit">
+			</td>
+		</tr>
+
+</form>
+</table>
+</div>

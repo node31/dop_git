@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>		
+		<title>Diet Optimizer</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link href="css/styles.css" rel="stylesheet" />
+		<link href="css/navbar_style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="jquery-1.11.0.js"> </script>
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/knockout-3.0.0.js"></script>
+		<script src="js/globalize.min.js"></script>
+		<script src="js/dx.chartjs.js"></script>
+                                      
+	</head>
+	<body>
+		<script>
+		
+		$(document).ready(function() {
+			//parseJson(myJSONdata);
+			//alert("entered");
+			var page = 'e';
+			$.ajax({
+				url: 'graph_data2.php', 
+				data: ({ page:page }),
+				method:'POST',
+				dataType:'json',
+				success: function(data)
+				{
+					//alert("suc");
+					parseJson(data);
+				}
+			});
+		});
+		
+			function parseJson(dataSource)  
+				{
+/*   var dataSource = [
+    { nutrient: "Illinois", optimum: 423.721, user: 476.851},
+    { nutrient: "Indiana", optimum: 178.719, user: 195.769},
+    { nutrient: "Michigan", optimum: 308.845, user: 335.793},
+    { nutrient: "Ohio", optimum: 348.555, user: 374.771},
+    { nutrient: "Wisconsin", optimum: 160.274, user: 182.373}
+];*/
+
+$("#chartContainer").dxChart({
+    dataSource: dataSource,
+    commonSeriesSettings: {
+        argumentField: "nutrient",
+        type: "bar",
+        hoverMode: "allArgumentPoints",
+        selectionMode: "allArgumentPoints",
+        label: {
+            visible: true,
+            format: "fixedPoint",
+            precision: 0
+        }
+    },
+    series: [
+        { valueField: "optimum", name: "optimum" },
+        { valueField: "user", name: "your diet" }
+    ],
+    title: "Comparative Diet Analysis",
+    legend: {
+        verticalAlignment: "bottom",
+        horizontalAlignment: "center"
+    },
+    pointClick: function (point) {
+        this.select();
+    }
+});
+};
+		</script>
+
+<div class="wrapper">
+<div class="header1"><img src="images/header.jpg"/ width="100%"></div>
+	<div class="navbar_page">
+		<ul class="navbar_list1">
+			<li class="navbar_item" id="navbar_list1_item1" style="border-left:4px inset;"><a href="meals.html" id="i">Home</a></li>
+			<li class="navbar_item" id="navbar_list1_item2"><a href="items.html" id="e"> My Stats</a></li>
+			<li class="navbar_item" id="navbar_list1_item4"><a href="#" id="w">Reports</a></li>
+			<li class="navbar_item" id="navbar_list1_item3" style="border-right:4px outset;"><a href="#" id="p">Recommendations</a></li>
+		</ul>
+	</div>
+
+
+		<!--<div class="line"></div>	-->
+<br><br>		
+
+		<div class="content">
+			<div class="pane">
+				<div class="long-title"><h3></h3></div>
+				<div id="chartContainer" style="width: 100%; height: 440px;"></div>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

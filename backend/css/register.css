@@ -1,0 +1,53 @@
+/* /* /* @charset "utf-8";
+/* CSS Document */
+
+.wrapper{
+margin-left:10%;
+width:80%;
+}
+
+
+.form{
+padding-left:5%;
+padding-bottom:5%;
+background-color:#f0f0f0;
+width:40%;
+margin-left:25%;
+margin-top:0px;
+border-radius:5px;
+background-color:#f0f0f0;
+font-family:Comic Sans MS;
+font-size:120%;
+}
+
+ .fields{
+color:#000000;
+margin-left:10%;
+font-family:Lucida Sans;
+border-radius:5px;
+margin-top:10px;
+width:60%;
+height:30px;
+}
+
+.submit{
+font-family:Comic Sans MS;
+font-size:18px;
+color:#fff;
+margin-left:17%;
+margin-top:20px;
+background: -webkit-gradient(linear, 0% 0%, 0% 150%, from(#0040FF), to(#0080FF));
+background: -ms-linear-gradient(top, #fff 0%,#777 100%); /* IE10+ */
+background: -moz-linear-gradient(top, #fff, #777);
+width:50%;
+height:50px;
+border-radius:10px;
+border:none;
+}
+
+.submit:hover{
+background: -webkit-gradient(linear, 0% 0%, 0% 150%, from(#0080FF), to(#0040FF));
+background: -ms-linear-gradient(top, #fff 0%,#777 100%); /* IE10+ */
+background: -moz-linear-gradient(top, #fff, #777);
+cursor:pointer;
+}

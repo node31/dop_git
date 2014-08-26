@@ -1,0 +1,15 @@
+[
+
+{"sno":"1", "date":"15-1-2001", [ 
+						{"name":"Palak paneer", "servings":"2", "time","1"},
+						{"name":"Aloo bhonda", "servings":"3", "time","1"},
+						{"name":"Palak paneer", "servings":"1", "time","1"}
+				]
+},
+
+{"sno":"1", "date":"16-1-2001", "time","1", "name":"palak paneer", "servings":"2"}
+
+]
+
+// Time = 1 ==> Breakfast, 2 ==> Lunch, 3 ==> Dinner
+
